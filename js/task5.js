@@ -45,3 +45,20 @@ console.log(getAllPropValues(products, 'quantity'));
 
 console.log(getAllPropValues(products, 'category'));
 // //  []
+
+
+
+
+/* 2й способ решения 
+
+function getAllPropValues (array, prop) {
+  'use strict';
+  // Write code under this line 
+  const items = [];
+  for (const product of array) {
+    if (prop in product) {
+      items.push(product[prop])
+    }
+  }
+  return items;
+}*/
