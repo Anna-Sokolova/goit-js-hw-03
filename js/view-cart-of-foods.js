@@ -5,7 +5,7 @@ const addAppleCartBtn = document.querySelector('button[data-product="🍎"]');
 const addGrapeCartBtn = document.querySelector('button[data-product="🍇"]');
 const addLemonCartBtn = document.querySelector('button[data-product="🍋"]');
 const addStrawberryCartBtn = document.querySelector('button[data-product="🍓"]');
-
+const clearCartBtn = document.querySelector('button[data-btn="clear"]');
 
 
 showCartBtn.addEventListener('click', () => {
@@ -30,4 +30,9 @@ addLemonCartBtn.addEventListener(
 addStrawberryCartBtn.addEventListener(
   'click',
   cart.add.bind(cart, { name: '🍓', price: 110 }),
+);
+
+clearCartBtn.addEventListener(
+  'click',
+  cart.clear.bind(cart),
 );
